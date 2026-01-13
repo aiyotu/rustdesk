@@ -234,7 +234,7 @@ jobs:
           path: rustdesk
 
       - name: Sign rustdesk files
-        if: env.UPLOAD_ARTIFACT == 'true' && env.SIGN_BASE_URL != ''
+        if: env.UPLOAD_ARTIFACT == 'false' && env.SIGN_BASE_URL != ''
         shell: bash
         run: |
           pip3 install requests argparse
